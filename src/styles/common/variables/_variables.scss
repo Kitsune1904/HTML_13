@@ -65,6 +65,9 @@ $font-size-h4-reg: 16px;
 $font-size-p: 16px;
 $font-size-li: 18px;
 
+$font-bold: 700;
+$font-normal: 400;
+
 
 @mixin tabletSD {
   @media (width >= 768px) {
