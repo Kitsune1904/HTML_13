@@ -1,0 +1,91 @@
+$color-main-regular: #323264;
+$color-main-alt: #46466e;
+$color-main-soft: #686887;
+
+$color-accent: #f0145a;
+
+$color-active-regular: #24a3ff;
+$color-active-hover: #0085ff;
+$color-active-active: #006ccf;
+
+$color-bg: #f5f5fa;
+$color-bg-alt: #ededf7;
+$color-text: #b3b3ba;
+$color-separator: #e6e6f0;
+
+@mixin color-gradient-reg {
+  background: rgb(50, 50, 100);
+  background: linear-gradient(
+    140deg,
+    rgba(50, 50, 100, 1) 0%,
+    rgba(50, 50, 100, 1) 76%,
+    rgba(165, 75, 95, 1) 100%
+  );
+}
+@mixin color-gradient-soft {
+  background: rgb(50, 50, 100);
+  background: linear-gradient(
+    45deg,
+    rgba(50, 50, 100, 1) 0%,
+    rgba(50, 50, 100, 1) 77%,
+    rgba(122, 66, 94, 1) 100%
+  );
+}
+@mixin color-gradient-red {
+  background: rgb(240, 20, 90);
+  background: linear-gradient(
+    315deg,
+    rgba(240, 20, 90, 1) 0%,
+    rgba(105, 50, 100, 1) 70%
+  );
+}
+@mixin color-gradient-supersoft {
+  background: rgb(50, 50, 100);
+  background: linear-gradient(
+    225deg,
+    rgba(50, 50, 100, 1) 0%,
+    rgba(50, 50, 100, 1) 50%,
+    rgba(100, 62, 114, 1) 100%
+  );
+}
+@mixin color-gradient-redtext {
+  background: rgb(240, 20, 90);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 20, 90, 1) 0%,
+    rgba(239, 128, 128, 1) 100%
+  );
+}
+
+$font-hero: 38px;
+$font-size-h2-reg: 30px;
+$font-size-h3-reg: 22px;
+$font-size-h3-caps: 14px;
+$font-size-h4-reg: 16px;
+$font-size-p: 16px;
+$font-size-li: 18px;
+
+
+@mixin tabletSD {
+  @media (width >= 768px) {
+    @content;
+  }
+}
+
+@mixin tabletHD {
+  @media (width >= 1024px) {
+    @content;
+  }
+}
+
+@mixin desctopSD {
+  @media (width >= 1440px) {
+    @content;
+  }
+}
+
+@mixin desctopHD {
+  @media (width >= 1920px) {
+    @content;
+  }
+}
