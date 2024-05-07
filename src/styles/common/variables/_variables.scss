@@ -9,10 +9,10 @@ $color-active-regular: #24a3ff;
 $color-active-hover: #0085ff;
 $color-active-active: #006ccf;
 
-$color-bg: #f5f5fa;
-$color-bg-alt: #ededf7;
-$color-text: #b3b3ba;
-$color-separator: #e6e6f0;
+$color-grey-bg: #f5f5fa;
+$color-grey-bg-alt: #ededf7;
+$color-grey-text: #b3b3ba;
+$color-grey-separator: #e6e6f0;
 
 @mixin color-gradient-reg {
   background: rgb(50, 50, 100);
@@ -68,13 +68,6 @@ $font-size-li: 18px;
 
 $font-bold: 700;
 $font-normal: 400;
-
-@font-face {
-  font-family: "Montserrat";
-  src: url(../../../fonts/Montserrat-VariableFont_wght.ttf);
-}
-
-$font-family: "Montserrat";
 
 
 @mixin tabletSD {

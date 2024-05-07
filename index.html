@@ -4,60 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hlegal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/styles/styles.css" />
   </head>
   <body class="mainPage">
     <header>
-      <div class="logo-holder">
-        <img src="./src/img/logo.svg" alt="hlegal logo" />
-        <img src="./src/img/slash.svg" alt="hlegal slash logo" />
+      <div class="menu-holder">
+        <div class="logo-holder">
+          <img src="./src/img/logo.svg" alt="hlegal logo" />
+          <img src="./src/img/slash.svg" alt="hlegal slash logo" />
+        </div>
+        <nav class="nav-holder">
+          <ul>
+            <li>
+              <a href="#">about us</a>
+            </li>
+            <li>
+              <a href="./pages/about.html">services</a>
+            </li>
+            <li>
+              <a href="./pages/services.html">team</a>
+            </li>
+            <li>
+              <a href="./pages/appointment.html">publications</a>
+            </li>
+            <li>
+              <a href="./pages/appointment.html">contact</a>
+            </li>
+          </ul>
+        </nav>
+        <label class="burger-holder">
+          <input type="checkbox" hidden id="burger" />
+          <img
+            src="./src/img/burger.svg"
+            alt="open menu sign"
+            class="hidden-burger"
+          />
+          <div class="nav">
+            <ul>
+              <li class="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  stroke-width="2"
+                >
+                  <line x1="8" y1="8" x2="24" y2="24" />
+                  <line x1="24" y1="8" x2="8" y2="24" />
+                </svg>
+              </li>
+              <li>
+                <a href="#">about us</a>
+              </li>
+              <li>
+                <a href="./pages/about.html">services</a>
+              </li>
+              <li>
+                <a href="./pages/services.html">team</a>
+              </li>
+              <li>
+                <a href="./pages/appointment.html">publications</a>
+              </li>
+              <li>
+                <a href="./pages/appointment.html">contact</a>
+              </li>
+            </ul>
+          </div>
+        </label>
       </div>
-      <nav class="nav-holder">
-        <ul>
-          <li>
-            <a href="#">about us</a>
-          </li>
-          <li>
-            <a href="./pages/about.html">services</a>
-          </li>
-          <li>
-            <a href="./pages/services.html">team</a>
-          </li>
-          <li>
-            <a href="./pages/appointment.html">publications</a>
-          </li>
-          <li>
-            <a href="./pages/appointment.html">contact</a>
-          </li>
-        </ul>
-      </nav>
-      <label class="burger-holder">
-        <input type="checkbox" hidden />
-        <img src="./src/img/burger.svg" alt="open menu sign" />
-        <ul>
-          <li>
-            <a href="#">about us</a>
-          </li>
-          <li>
-            <a href="./pages/about.html">services</a>
-          </li>
-          <li>
-            <a href="./pages/services.html">team</a>
-          </li>
-          <li>
-            <a href="./pages/appointment.html">publications</a>
-          </li>
-          <li>
-            <a href="./pages/appointment.html">contact</a>
-          </li>
-        </ul>
-      </label>
+
       <div class="setting-holder">
         <div class="lang">
           <a href="#">УК</a><a href="#">РУ</a><a href="#">EN</a>
         </div>
         <div class="contact"><a href="#">0800 211 927</a></div>
       </div>
+      <div class="losung">
+        <p>you legal solutions provider</p>
+      </div>
     </header>
+    <main></main>
   </body>
 </html>
