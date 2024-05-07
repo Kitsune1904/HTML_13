@@ -1,0 +1,20 @@
+@use "../../common" as *;
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $color-main-regular;
+
+    a {
+        color: $color-simple;
+    }
+
+    .nav-holder {
+        display: none;
+    }
+    .setting-holder {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        justify-content: space-between;
+    }
+}

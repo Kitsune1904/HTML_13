@@ -1,6 +1,7 @@
 $color-main-regular: #323264;
 $color-main-alt: #46466e;
 $color-main-soft: #686887;
+$color-simple: #FFFFFF;
 
 $color-accent: #f0145a;
 
@@ -67,6 +68,13 @@ $font-size-li: 18px;
 
 $font-bold: 700;
 $font-normal: 400;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+$font-family: "Montserrat";
 
 
 @mixin tabletSD {
