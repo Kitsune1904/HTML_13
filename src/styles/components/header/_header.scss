@@ -2,6 +2,29 @@
 
 .gradient {
   background: $color-gradient-supersoft;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  &::before,
+  &::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      border-radius: 0 0 12px 12px;
+  }
+
+  &::before {
+      bottom: -10px;
+      right: 20px;
+      left: 20px;
+      background-color: #CACADB;
+  }
+
+  &::after {
+      bottom: -20px;
+      right: 40px;
+      left: 40px;
+      background-color: #E7E7F2;
+  }
 }
 
 header {
@@ -25,6 +48,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 4%;
+    z-index: 100;
 
     .logo-holder {
       padding-top: 7px;
@@ -38,128 +62,137 @@ header {
       display: none;
     }
 
-    .burger-holder {
-      display: block;
-
-      .nav {
-        position: absolute;
-        display: none;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: $color-main-regular-alfa;
-        transition: 70%;
-        height: 100vh;
-
-        ul {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: stretch;
-          gap: 15px;
-          width: 92%;
-          margin: 0 4%;
-          background-color: $color-simple;
-          padding: 12px;
-          border-top-left-radius: 8px;
-          border-top-right-radius: 8px;
-
-          li {
-            text-align: end;
-
-            svg {
-              stroke: $color-accent;
-              cursor: pointer;
-            }
-            a {
-              text-align: center;
-              display: block;
-              font-size: 24px;
-              border-radius: 8px;
-              padding: 7px 0;
-              background-color: $color-grey-bg;
-              color: $color-active-regular;
-            }
-
-            a:hover {
-              background-color: $color-grey-separator;
-            }
-
-            a:active,
-            a:focus-visible {
-              color: $color-accent;
-            }
-          }
-        }
-      }
-      //TODO: change on js
-      input:checked ~ .hidden-burger {
-        background: $color-gradient-red;
-        border-radius: 8px;
-      }
-
-      input:checked ~ div {
-        display: block;
-      }
-
-      .opened-burger {
-        display: none;
-      }
+    .nav {
+      position: fixed;
+      display: none;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: $color-main-regular-alfa;
+      transition: 70%;
+      height: 100vh;
+      animation: fadeInOut 0.5s ease-in-out;
     }
-  }
 
-  .setting-holder {
-    padding: 4%;
-    grid-row: 1/2;
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f5f5fa33;
+    ul {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      gap: 15px;
+      width: 92%;
+      margin: 0 4%;
+      background-color: $color-simple;
+      padding: 12px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
 
-    .lang {
-      font-size: 12px;
-      a {
-        padding: 5px 7px 5px 7px;
-        border-radius: 8px;
-        margin-right: 3px;
-      }
-      a:hover {
-        background-color: $color-accent;
-      }
-    }
-    .contact {
-      a:hover {
-        color: $color-accent;
-      }
-    }
-  }
+      li {
+        text-align: end;
 
-  .losung {
-    grid-column: 1/-1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 50px;
-
-    h1 {
-      font-weight: $font-bold;
-      font-size: $font-hero;
-      color: $color-simple;
-      text-align: center;
-      line-height: 46.32px;
-      margin: 130px 0 156px 0;
-    }
-    a:hover,
-    a:active {
-      svg {
-        circle,
-        path {
+        svg {
           stroke: $color-accent;
+          cursor: pointer;
+        }
+        a {
+          text-align: center;
+          display: block;
+          font-size: 24px;
+          border-radius: 8px;
+          padding: 7px 0;
+          background-color: $color-grey-bg;
+          color: $color-active-regular;
+        }
+
+        a:hover {
+          background-color: $color-grey-separator;
+        }
+
+        a:active,
+        a:focus-visible {
+          color: $color-accent;
         }
       }
     }
+  }
+}
+
+.setting-holder {
+  padding: 4%;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5fa33;
+
+  .lang {
+    font-size: 12px;
+    a {
+      padding: 5px 7px 5px 7px;
+      border-radius: 8px;
+      margin-right: 3px;
+    }
+    a:hover {
+      background-color: $color-accent;
+    }
+  }
+  .contact {
+    a:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.losung {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+
+  h1 {
+    font-weight: $font-bold;
+    font-size: $font-hero;
+    color: $color-simple;
+    text-align: center;
+    line-height: 46.32px;
+    margin: 130px 0 156px 0;
+  }
+
+  svg {
+    rotate: -90deg;
+    transition: 1s;
+  }
+  .active {
+    rotate: 0deg;
+    transition: 1s;
+  }
+
+  svg:hover,
+  .active {
+    circle,
+    path {
+      stroke: $color-accent;
+    }
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  50% {
+    opacity: 0.5;
+    display: block;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
   }
 }

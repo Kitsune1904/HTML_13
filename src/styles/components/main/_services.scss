@@ -1,0 +1,46 @@
+@use "../../common" as *;
+
+.services {
+  padding: 0 8%;
+
+  p {
+    color: $color-active-regular;
+    text-transform: uppercase;
+  }
+
+  .services-holder {
+    display: grid;
+    gap: 30px;
+    padding-bottom: 60px;
+    h2 {
+      background: $color-gradient-redtext-reverce;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: $font-size-h2-reg;
+      font-weight: $font-bold;
+      padding-top: 10px;
+      line-height: 36.57px;
+    }
+    .services-card {
+        img {
+            background-color: $color-simple;
+            border-radius: 24px;
+            padding: 14px;
+        }
+        h3 {
+            padding: 30px 0 12px 0;
+            color: $color-active-regular;
+            font-size: $font-size-h3-reg;
+            font-weight: $font-bold;
+            line-height: 26.82px;
+        }
+
+        p {
+            line-height: 26px;
+            font-size: $font-size-p;
+            text-transform: none;
+            color: $color-simple;
+        }
+    }
+  }
+}

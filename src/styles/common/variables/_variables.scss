@@ -48,6 +48,12 @@ $color-gradient-redtext: linear-gradient(
   rgba(239, 128, 128, 1) 100%
 );
 
+$color-gradient-redtext-reverce: linear-gradient(
+  90deg,
+  rgba(240, 20, 90, 1) 0%,
+  rgba(239, 128, 128, 1) 100%
+);
+
 $font-hero: 38px;
 $font-size-h2-reg: 30px;
 $font-size-h3-reg: 22px;

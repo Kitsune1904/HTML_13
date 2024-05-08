@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/styles/styles.css" />
+  
   </head>
   <body class="mainPage">
     <div class="gradient">
@@ -42,45 +43,46 @@
             </ul>
           </nav>
           <!-- /TODO: change on js / -->
-          <label class="burger-holder">
-            <input type="checkbox" hidden id="burger" />
-            <img
-              src="./src/img/burger.svg"
-              alt="open menu sign"
-              class="hidden-burger"
-            />
-            <div class="nav">
-              <ul>
-                <li class="button">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    stroke-width="2"
-                  >
-                    <line x1="8" y1="8" x2="24" y2="24" />
-                    <line x1="24" y1="8" x2="8" y2="24" />
-                  </svg>
-                </li>
-                <li>
-                  <a href="#">about us</a>
-                </li>
-                <li>
-                  <a href="./pages/about.html">services</a>
-                </li>
-                <li>
-                  <a href="./pages/services.html">team</a>
-                </li>
-                <li>
-                  <a href="./pages/appointment.html">publications</a>
-                </li>
-                <li>
-                  <a href="./pages/appointment.html">contact</a>
-                </li>
-              </ul>
-            </div>
-          </label>
+          <img
+            src="./src/img/burger.svg"
+            alt="open menu sign"
+            class="burger"
+            id="burgerOpen"
+          />
+          <div class="nav" id="nav">
+            <ul>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  stroke="white"
+                  stroke-width="2"
+                  class="button"
+                  id="burgerClose"
+                >
+                  <line x1="8" y1="8" x2="24" y2="24" />
+                  <line x1="24" y1="8" x2="8" y2="24" />
+                </svg>
+              </li>
+              <li>
+                <a href="#">about us</a>
+              </li>
+              <li>
+                <a href="./pages/about.html">services</a>
+              </li>
+              <li>
+                <a href="./pages/services.html">team</a>
+              </li>
+              <li>
+                <a href="./pages/appointment.html">publications</a>
+              </li>
+              <li>
+                <a href="./pages/appointment.html">contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="setting-holder">
           <div class="lang">
@@ -91,6 +93,8 @@
         <div class="losung">
           <h1>you legal solutions provider</h1>
           <svg
+            class="button"
+            id="showBtn"
             width="42"
             height="42"
             viewBox="0 0 42 42"
@@ -118,7 +122,7 @@
       </header>
       <div class="description-holder" id="description">
         <div class="buttons">
-          <a href="#consistent">Consistent</a>
+          <a href="#consistent" target="_self">Consistent</a>
           <a href="#customer">Customer oriented</a>
           <a href="#innovation">Innovative</a>
           <a href="#business">Business oriented</a>
@@ -173,9 +177,175 @@
             </p>
           </div>
         </div>
+        <div class="services">
+          <p href="#">
+            services
+            <svg
+              width="8"
+              height="11"
+              viewBox="0 0 8 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2" />
+            </svg>
+          </p>
+          <div id="servicesCardsHolder" class="services-holder">
+            <h2>What can we do better than others?</h2>
+            <div class="services-card">
+              <img src="./src/img/e_commerce.svg" alt="rose box" />
+              <h3>IT and e-commerce</h3>
+              <p>
+                An endless stream of contracts, tax issues, labor relations,
+                corporate papers - legal work distracts you from doing business.
+                But there is not much work to do to hire an in-house lawyer.
+              </p>
+            </div>
+            <div class="services-card">
+              <img src="./src/img/support.svg" alt="rose box" />
+              <h3>Comprehensive daily legal support</h3>
+              <p>
+                In addition, over time, the work will become the same type and
+                uninteresting for a full-time lawyer. And we know very well how
+                difficult it is to find a good candidate with experience in the
+                field of information technology in Ukraine.
+              </p>
+            </div>
+            <div class="services-card">
+              <img src="./src/img/relation.svg" alt="rose box" />
+              <h3>Structuring corporate relationships</h3>
+              <p>
+                Instead of just providing legal services, we will hire a lawyer
+                or a whole team that will fit into the daily life of your
+                company.
+              </p>
+            </div>
+            <div class="services-card">
+              <img src="./src/img/contract.svg" alt="rose box" />
+              <h3>Building contractual relations</h3>
+              <p>
+                Once a week, or week after month, you have your own lawyer by
+                your side. Anyone in the company can catch it at the coffee
+                maker and just talk about current affairs instead of waiting for
+                update status.
+              </p>
+            </div>
+            <div class="services-card">
+              <img src="./src/img/safe.svg" alt="rose box" />
+              <h3>Protection of business, intellectual property</h3>
+              <p>
+                And all the other time he will work on new diverse projects, so
+                he will definitely not stop in professional development. One way
+                or another, all Axon Partners will work for you instead of a
+                corporate lawyer.
+              </p>
+            </div>
+            <div class="services-card">
+              <img src="./src/img/judicial.svg" alt="rose box" />
+              <h3>Judicial representation</h3>
+              <p>
+                Is it a small, medium-sized company or a market leader? Local
+                business or multinational company? Do you have your own legal
+                department or not?
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <main>
+      <div class="team">
+        <macro-carousel pagination>
+          <div class="slide">
+            <img
+              src="./src/img/worker_slide_one.png"
+              alt="company worker with glasses"
+            />
+            <p>
+              команда<svg
+                width="8"
+                height="11"
+                viewBox="0 0 8 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1L6 5.5L1.5 10"
+                  stroke="#24A3FF"
+                  stroke-width="2"
+                />
+              </svg>
+            </p>
+            <h2>
+              Ми звикли брати на себе відповідальність та завжди гарантуємо
+              чесну, вчасну допомогу, навіть у ситуаціях, коли більшість
+              безсилі.
+            </h2>
+            <h3>Олександр Олександровський</h3>
+            <p>Керуючий партнер</p>
+          </div>
+          <div class="slide">
+            <img
+              src="./src/img/worker_slide_one.png"
+              alt="company worker with glasses"
+            />
+            <p>
+              команда<svg
+                width="8"
+                height="11"
+                viewBox="0 0 8 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1L6 5.5L1.5 10"
+                  stroke="#24A3FF"
+                  stroke-width="2"
+                />
+              </svg>
+            </p>
+            <h2>
+              Ми звикли брати на себе відповідальність та завжди гарантуємо
+              чесну, вчасну допомогу, навіть у ситуаціях, коли більшість
+              безсилі.
+            </h2>
+            <h3>Олександр Олександровський</h3>
+            <p>Керуючий партнер</p>
+          </div>
+          <div class="slide">
+            <img
+              src="./src/img/worker_slide_one.png"
+              alt="company worker with glasses"
+            />
+            <p>
+              команда<svg
+                width="8"
+                height="11"
+                viewBox="0 0 8 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1L6 5.5L1.5 10"
+                  stroke="#24A3FF"
+                  stroke-width="2"
+                />
+              </svg>
+            </p>
+            <h2>
+              Ми звикли брати на себе відповідальність та завжди гарантуємо
+              чесну, вчасну допомогу, навіть у ситуаціях, коли більшість
+              безсилі.
+            </h2>
+            <h3>Олександр Олександровський</h3>
+            <p>Керуючий партнер</p>
+          </div>
+        </macro-carousel>
+      </div>
+    </main>
+    <script src="./show_button.js"></script>
+    <script src="./slider.js"></script>
 
-    <main></main>
+
   </body>
 </html>

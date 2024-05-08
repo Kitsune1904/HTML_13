@@ -148,6 +148,26 @@ a {
 
 .gradient {
   background: linear-gradient(225deg, rgb(50, 50, 100) 0%, rgb(50, 50, 100) 50%, rgb(100, 62, 114) 100%);
+  border-radius: 0 0 12px 12px;
+  position: relative;
+}
+.gradient::before, .gradient::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+}
+.gradient::before {
+  bottom: -10px;
+  right: 20px;
+  left: 20px;
+  background-color: #CACADB;
+}
+.gradient::after {
+  bottom: -20px;
+  right: 40px;
+  left: 40px;
+  background-color: #E7E7F2;
 }
 
 header {
@@ -171,6 +191,7 @@ header .menu-holder {
   align-items: center;
   justify-content: space-between;
   padding: 0 4%;
+  z-index: 100;
 }
 header .menu-holder .logo-holder {
   padding-top: 7px;
@@ -181,11 +202,8 @@ header .menu-holder .logo-holder img:last-child {
 header .menu-holder .nav-holder {
   display: none;
 }
-header .menu-holder .burger-holder {
-  display: block;
-}
-header .menu-holder .burger-holder .nav {
-  position: absolute;
+header .menu-holder .nav {
+  position: fixed;
   display: none;
   bottom: 0;
   left: 0;
@@ -193,8 +211,9 @@ header .menu-holder .burger-holder .nav {
   background-color: rgba(50, 50, 100, 0.7);
   transition: 70%;
   height: 100vh;
+  animation: fadeInOut 0.5s ease-in-out;
 }
-header .menu-holder .burger-holder .nav ul {
+header .menu-holder ul {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -209,14 +228,14 @@ header .menu-holder .burger-holder .nav ul {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-header .menu-holder .burger-holder .nav ul li {
+header .menu-holder ul li {
   text-align: end;
 }
-header .menu-holder .burger-holder .nav ul li svg {
+header .menu-holder ul li svg {
   stroke: #f0145a;
   cursor: pointer;
 }
-header .menu-holder .burger-holder .nav ul li a {
+header .menu-holder ul li a {
   text-align: center;
   display: block;
   font-size: 24px;
@@ -225,24 +244,15 @@ header .menu-holder .burger-holder .nav ul li a {
   background-color: #f5f5fa;
   color: #24a3ff;
 }
-header .menu-holder .burger-holder .nav ul li a:hover {
+header .menu-holder ul li a:hover {
   background-color: #e6e6f0;
 }
-header .menu-holder .burger-holder .nav ul li a:active,
-header .menu-holder .burger-holder .nav ul li a:focus-visible {
+header .menu-holder ul li a:active,
+header .menu-holder ul li a:focus-visible {
   color: #f0145a;
 }
-header .menu-holder .burger-holder input:checked ~ .hidden-burger {
-  background: linear-gradient(315deg, rgb(240, 20, 90) 0%, rgb(105, 50, 100) 70%);
-  border-radius: 8px;
-}
-header .menu-holder .burger-holder input:checked ~ div {
-  display: block;
-}
-header .menu-holder .burger-holder .opened-burger {
-  display: none;
-}
-header .setting-holder {
+
+.setting-holder {
   padding: 4%;
   grid-row: 1/2;
   grid-column: 1/-1;
@@ -251,28 +261,29 @@ header .setting-holder {
   align-items: center;
   background-color: rgba(245, 245, 250, 0.2);
 }
-header .setting-holder .lang {
+.setting-holder .lang {
   font-size: 12px;
 }
-header .setting-holder .lang a {
+.setting-holder .lang a {
   padding: 5px 7px 5px 7px;
   border-radius: 8px;
   margin-right: 3px;
 }
-header .setting-holder .lang a:hover {
+.setting-holder .lang a:hover {
   background-color: #f0145a;
 }
-header .setting-holder .contact a:hover {
+.setting-holder .contact a:hover {
   color: #f0145a;
 }
-header .losung {
+
+.losung {
   grid-column: 1/-1;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 50px;
 }
-header .losung h1 {
+.losung h1 {
   font-weight: 700;
   font-size: 38px;
   color: #ffffff;
@@ -280,16 +291,41 @@ header .losung h1 {
   line-height: 46.32px;
   margin: 130px 0 156px 0;
 }
-header .losung a:hover svg circle,
-header .losung a:hover svg path,
-header .losung a:active svg circle,
-header .losung a:active svg path {
+.losung svg {
+  rotate: -90deg;
+  transition: 1s;
+}
+.losung .active {
+  rotate: 0deg;
+  transition: 1s;
+}
+.losung svg:hover circle,
+.losung svg:hover path,
+.losung .active circle,
+.losung .active path {
   stroke: #f0145a;
 }
 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    opacity: 0.5;
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
 .description-holder {
   font-family: Montserrat;
   color: #ffffff;
+  opacity: 0;
+  display: none;
+  animation: fadeInOut 1s ease-in-out;
 }
 .description-holder .buttons {
   display: flex;
@@ -333,6 +369,8 @@ header .losung a:active svg path {
 }
 .description-holder .card-holder .card {
   display: none;
+  opacity: 0;
+  animation: fadeInOut 1s ease-in-out;
 }
 .description-holder .card-holder .card h3 {
   font-size: 20px;
@@ -347,4 +385,73 @@ header .losung a:active svg path {
 }
 .description-holder .card-holder .card:target {
   display: block;
+  opacity: 1;
+}
+
+.description-holder.active {
+  opacity: 1;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    opacity: 0.5;
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+.services {
+  padding: 0 8%;
+}
+.services p {
+  color: #24a3ff;
+  text-transform: uppercase;
+}
+.services .services-holder {
+  display: grid;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+.services .services-holder h2 {
+  background: linear-gradient(90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 10px;
+  line-height: 36.57px;
+}
+.services .services-holder .services-card img {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 14px;
+}
+.services .services-holder .services-card h3 {
+  padding: 30px 0 12px 0;
+  color: #24a3ff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.82px;
+}
+.services .services-holder .services-card p {
+  line-height: 26px;
+  font-size: 16px;
+  text-transform: none;
+  color: #ffffff;
+}
+
+main .team {
+  padding: 53px 8% 0 8%;
+  border-radius: 12px;
+}
+main .team .slide img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
 }/*# sourceMappingURL=styles.css.map */
