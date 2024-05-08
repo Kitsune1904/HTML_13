@@ -146,18 +146,23 @@ a {
   text-decoration: none;
 }
 
-header {
-  background: rgb(50, 50, 100);
+.gradient {
   background: linear-gradient(225deg, rgb(50, 50, 100) 0%, rgb(50, 50, 100) 50%, rgb(100, 62, 114) 100%);
+}
+
+header {
+  background-image: url(../img/bg_phone.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 45px 57px 498px;
   justify-content: space-between;
   font-family: Montserrat;
   font-weight: 700;
-  align-items: center;
 }
 header a {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 header .menu-holder {
   grid-row: 2/2;
@@ -168,7 +173,7 @@ header .menu-holder {
   padding: 0 4%;
 }
 header .menu-holder .logo-holder {
-  padding: 4% 0;
+  padding-top: 7px;
 }
 header .menu-holder .logo-holder img:last-child {
   padding-bottom: 7px;
@@ -185,8 +190,8 @@ header .menu-holder .burger-holder .nav {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #323264;
-  opacity: 70%;
+  background-color: rgba(50, 50, 100, 0.7);
+  transition: 70%;
   height: 100vh;
 }
 header .menu-holder .burger-holder .nav ul {
@@ -198,8 +203,8 @@ header .menu-holder .burger-holder .nav ul {
   justify-content: stretch;
   gap: 15px;
   width: 92%;
-  margin: 0 4% 0 4%;
-  background-color: #FFFFFF;
+  margin: 0 4%;
+  background-color: #ffffff;
   padding: 12px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -223,11 +228,11 @@ header .menu-holder .burger-holder .nav ul li a {
 header .menu-holder .burger-holder .nav ul li a:hover {
   background-color: #e6e6f0;
 }
-header .menu-holder .burger-holder .nav ul li a:active {
+header .menu-holder .burger-holder .nav ul li a:active,
+header .menu-holder .burger-holder .nav ul li a:focus-visible {
   color: #f0145a;
 }
 header .menu-holder .burger-holder input:checked ~ .hidden-burger {
-  background: rgb(240, 20, 90);
   background: linear-gradient(315deg, rgb(240, 20, 90) 0%, rgb(105, 50, 100) 70%);
   border-radius: 8px;
 }
@@ -256,4 +261,90 @@ header .setting-holder .lang a {
 }
 header .setting-holder .lang a:hover {
   background-color: #f0145a;
+}
+header .setting-holder .contact a:hover {
+  color: #f0145a;
+}
+header .losung {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+}
+header .losung h1 {
+  font-weight: 700;
+  font-size: 38px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 46.32px;
+  margin: 130px 0 156px 0;
+}
+header .losung a:hover svg circle,
+header .losung a:hover svg path,
+header .losung a:active svg circle,
+header .losung a:active svg path {
+  stroke: #f0145a;
+}
+
+.description-holder {
+  font-family: Montserrat;
+  color: #ffffff;
+}
+.description-holder .buttons {
+  display: flex;
+  gap: 30px;
+  padding-inline: 30px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 30px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.description-holder .buttons a {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 34px 0;
+  transition: 1s;
+}
+.description-holder .buttons a:nth-child(1) {
+  background: linear-gradient(-90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.description-holder .buttons a:nth-child(1):hover,
+.description-holder .buttons a:hover {
+  -webkit-text-fill-color: #f0145a;
+  cursor: pointer;
+}
+.description-holder .buttons a:visited {
+  color: #ffffff;
+}
+.description-holder .buttons::-webkit-scrollbar {
+  display: none;
+}
+.description-holder .card-holder {
+  margin: 0 30px;
+  border-top: 4px solid hsla(0, 0%, 100%, 0.3);
+  padding-bottom: 30px;
+}
+.description-holder .card-holder .card {
+  display: none;
+}
+.description-holder .card-holder .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 30px 0;
+  line-height: 24.38px;
+}
+.description-holder .card-holder .card p {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.description-holder .card-holder .card:target {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */

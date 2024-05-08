@@ -13,52 +13,17 @@
     <link rel="stylesheet" href="./src/styles/styles.css" />
   </head>
   <body class="mainPage">
-    <header>
-      <div class="menu-holder">
-        <div class="logo-holder">
-          <img src="./src/img/logo.svg" alt="hlegal logo" />
-          <img src="./src/img/slash.svg" alt="hlegal slash logo" />
-        </div>
-        <nav class="nav-holder">
-          <ul>
-            <li>
-              <a href="#">about us</a>
-            </li>
-            <li>
-              <a href="./pages/about.html">services</a>
-            </li>
-            <li>
-              <a href="./pages/services.html">team</a>
-            </li>
-            <li>
-              <a href="./pages/appointment.html">publications</a>
-            </li>
-            <li>
-              <a href="./pages/appointment.html">contact</a>
-            </li>
-          </ul>
-        </nav>
-        <label class="burger-holder">
-          <input type="checkbox" hidden id="burger" />
-          <img
-            src="./src/img/burger.svg"
-            alt="open menu sign"
-            class="hidden-burger"
-          />
-          <div class="nav">
+    <div class="gradient">
+      <header>
+        <div class="menu-holder">
+          <div class="logo-holder">
+            <a href="#">
+              <img src="./src/img/logo.svg" alt="hlegal logo" />
+              <img src="./src/img/slash.svg" alt="hlegal slash logo" />
+            </a>
+          </div>
+          <nav class="nav-holder">
             <ul>
-              <li class="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  stroke-width="2"
-                >
-                  <line x1="8" y1="8" x2="24" y2="24" />
-                  <line x1="24" y1="8" x2="8" y2="24" />
-                </svg>
-              </li>
               <li>
                 <a href="#">about us</a>
               </li>
@@ -75,20 +40,142 @@
                 <a href="./pages/appointment.html">contact</a>
               </li>
             </ul>
-          </div>
-        </label>
-      </div>
-
-      <div class="setting-holder">
-        <div class="lang">
-          <a href="#">УК</a><a href="#">РУ</a><a href="#">EN</a>
+          </nav>
+          <!-- /TODO: change on js / -->
+          <label class="burger-holder">
+            <input type="checkbox" hidden id="burger" />
+            <img
+              src="./src/img/burger.svg"
+              alt="open menu sign"
+              class="hidden-burger"
+            />
+            <div class="nav">
+              <ul>
+                <li class="button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    stroke-width="2"
+                  >
+                    <line x1="8" y1="8" x2="24" y2="24" />
+                    <line x1="24" y1="8" x2="8" y2="24" />
+                  </svg>
+                </li>
+                <li>
+                  <a href="#">about us</a>
+                </li>
+                <li>
+                  <a href="./pages/about.html">services</a>
+                </li>
+                <li>
+                  <a href="./pages/services.html">team</a>
+                </li>
+                <li>
+                  <a href="./pages/appointment.html">publications</a>
+                </li>
+                <li>
+                  <a href="./pages/appointment.html">contact</a>
+                </li>
+              </ul>
+            </div>
+          </label>
         </div>
-        <div class="contact"><a href="#">0800 211 927</a></div>
+        <div class="setting-holder">
+          <div class="lang">
+            <a href="#">УК</a><a href="#">РУ</a><a href="#">EN</a>
+          </div>
+          <div class="contact"><a href="tel:0800 211 927">0800 211 927</a></div>
+        </div>
+        <div class="losung">
+          <h1>you legal solutions provider</h1>
+          <svg
+            width="42"
+            height="42"
+            viewBox="0 0 42 42"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_22728_12366)">
+              <circle
+                opacity="0.5"
+                cx="21"
+                cy="21"
+                r="20"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2" />
+            </g>
+            <defs>
+              <clipPath id="clip0_22728_12366">
+                <rect width="42" height="42" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </header>
+      <div class="description-holder" id="description">
+        <div class="buttons">
+          <a href="#consistent">Consistent</a>
+          <a href="#customer">Customer oriented</a>
+          <a href="#innovation">Innovative</a>
+          <a href="#business">Business oriented</a>
+        </div>
+        <div class="card-holder">
+          <div class="card" id="consistent">
+            <h3>We turn the idea of legal services</h3>
+            <p>
+              Consolidating many years of experience and practice, the company's
+              lawyers accompany complex projects and achieve a number of
+              important decisions for the industry. Many of them form the
+              practice of applying the law of the sea in Ukraine.
+            </p>
+          </div>
+          <div class="card" id="customer">
+            <h3>
+              The Power of Customer-Centricity: Driving Growth and Loyalty in
+              Hlegal
+            </h3>
+            <p>
+              At Hlegal, clients come first. We listen, understand, and tailor
+              legal strategies to your unique needs. With unwavering dedication,
+              we provide personalized solutions that exceed expectations and
+              earn your trust.
+            </p>
+          </div>
+          <div class="card" id="innovation">
+            <h3>Legal Innovation: Hlegal Leads the Way</h3>
+            <p>
+              At Hlegal, innovation is woven into our DNA. By embracing
+              cutting-edge technologies and pioneering strategies, we
+              consistently exceed client expectations. With us, legal excellence
+              isn't just a goal; it's a constantly evolving standard.
+            </p>
+          </div>
+          <div class="card" id="business">
+            <h3>Business-Driven Legal Solutions: Hlegal Delivers Results</h3>
+            <p>
+              Focused on your bottom line, Hlegal provides tailored legal
+              strategies that align with your business objectives. With our
+              expertise in commercial law, we navigate complexities to safeguard
+              your success and profitability.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Business-Driven Legal Solutions: Hlegal Delivers Results</h3>
+            <p>
+              Focused on your bottom line, Hlegal provides tailored legal
+              strategies that align with your business objectives. With our
+              expertise in commercial law, we navigate complexities to safeguard
+              your success and profitability.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="losung">
-        <p>you legal solutions provider</p>
-      </div>
-    </header>
+    </div>
+
     <main></main>
   </body>
 </html>

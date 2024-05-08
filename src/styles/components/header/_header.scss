@@ -1,14 +1,19 @@
 @use "../../common" as *;
 
+.gradient {
+  background: $color-gradient-supersoft;
+}
+
 header {
-  @include color-gradient-supersoft;
+  background-image: url(../img/bg_phone.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 45px 57px 498px;
   justify-content: space-between;
   font-family: Montserrat;
   font-weight: $font-bold;
-  align-items: center;
-
   a {
     color: $color-simple;
   }
@@ -22,7 +27,7 @@ header {
     padding: 0 4%;
 
     .logo-holder {
-      padding: 4% 0;
+      padding-top: 7px;
 
       img:last-child {
         padding-bottom: 7px;
@@ -42,8 +47,8 @@ header {
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: $color-main-regular;
-        opacity: 70%;
+        background-color: $color-main-regular-alfa;
+        transition: 70%;
         height: 100vh;
 
         ul {
@@ -55,9 +60,7 @@ header {
           justify-content: stretch;
           gap: 15px;
           width: 92%;
-          margin: 0 4% 0 4%;
-
-          //TODO: delete
+          margin: 0 4%;
           background-color: $color-simple;
           padding: 12px;
           border-top-left-radius: 8px;
@@ -81,18 +84,19 @@ header {
             }
 
             a:hover {
-                background-color: $color-grey-separator;
+              background-color: $color-grey-separator;
             }
 
-            a:active {
-                color: $color-accent;
+            a:active,
+            a:focus-visible {
+              color: $color-accent;
             }
           }
         }
       }
-
+      //TODO: change on js
       input:checked ~ .hidden-burger {
-        @include color-gradient-red;
+        background: $color-gradient-red;
         border-radius: 8px;
       }
 
@@ -124,6 +128,37 @@ header {
       }
       a:hover {
         background-color: $color-accent;
+      }
+    }
+    .contact {
+      a:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .losung {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+
+    h1 {
+      font-weight: $font-bold;
+      font-size: $font-hero;
+      color: $color-simple;
+      text-align: center;
+      line-height: 46.32px;
+      margin: 130px 0 156px 0;
+    }
+    a:hover,
+    a:active {
+      svg {
+        circle,
+        path {
+          stroke: $color-accent;
+        }
       }
     }
   }
