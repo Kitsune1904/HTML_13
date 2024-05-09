@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/styles/styles.css" />
-  
   </head>
   <body class="mainPage">
     <div class="gradient">
@@ -255,8 +254,8 @@
     </div>
     <main>
       <div class="team">
-        <macro-carousel pagination>
-          <div class="slide">
+        <div class="slide-holder">
+          <div class="slide" id="firstSlide">
             <img
               src="./src/img/worker_slide_one.png"
               alt="company worker with glasses"
@@ -281,12 +280,14 @@
               чесну, вчасну допомогу, навіть у ситуаціях, коли більшість
               безсилі.
             </h2>
-            <h3>Олександр Олександровський</h3>
-            <p>Керуючий партнер</p>
+            <div class="bio">
+              <h3>Олександр Олександровський</h3>
+              <p>Керуючий партнер</p>
+            </div>
           </div>
-          <div class="slide">
+          <div class="slide" id="secondSlide">
             <img
-              src="./src/img/worker_slide_one.png"
+              src="./src/img/worker_slide_two.png"
               alt="company worker with glasses"
             />
             <p>
@@ -309,12 +310,14 @@
               чесну, вчасну допомогу, навіть у ситуаціях, коли більшість
               безсилі.
             </h2>
-            <h3>Олександр Олександровський</h3>
-            <p>Керуючий партнер</p>
+            <div class="bio">
+              <h3>Олександр Олександровський</h3>
+              <p>Керуючий партнер</p>
+            </div>
           </div>
-          <div class="slide">
+          <div class="slide" id="thirdSlide">
             <img
-              src="./src/img/worker_slide_one.png"
+              src="./src/img/worker_slide_three.png"
               alt="company worker with glasses"
             />
             <p>
@@ -337,15 +340,49 @@
               чесну, вчасну допомогу, навіть у ситуаціях, коли більшість
               безсилі.
             </h2>
-            <h3>Олександр Олександровський</h3>
-            <p>Керуючий партнер</p>
+            <div class="bio">
+              <h3>Олександр Олександровський</h3>
+              <p>Керуючий партнер</p>
+            </div>
           </div>
-        </macro-carousel>
+        </div>
+        <div class="pagination-holder">
+          <a href="#firstSlide"></a>
+          <a href="#secondSlide"></a>
+          <a href="#thirdSlide"></a>
+        </div>
+      </div>
+      <div class="partners">
+        <h2>They already trust us</h2>
+        <div class="partners-logos">
+          <img src="./src/img/hillel.png" alt="hillel logo">
+          <img src="./src/img/wannaBiz.png" alt="wannaBiz logo">
+          <img src="./src/img/tapgerine.png" alt="tapgerine logo">
+          <img src="./src/img/3Dlook.png" alt="3D look logo">
+          <img src="./src/img/orengear.png" alt="orengear logo">
+          <img src="./src/img/adtelligent.png" alt="adtelligent logo">
+        </div>
+      </div>
+      <div class="publications">
+        <p>publications<svg
+          width="8"
+          height="11"
+          viewBox="0 0 8 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2" />
+        </svg></p>
+        <h2>We have something to tell</h2>
+        <div class="card-holder">
+          <div class="card">
+            
+          </div>
+        </div>
+
       </div>
     </main>
     <script src="./show_button.js"></script>
     <script src="./slider.js"></script>
-
-
   </body>
 </html>

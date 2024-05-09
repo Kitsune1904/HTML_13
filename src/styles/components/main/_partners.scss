@@ -1,0 +1,22 @@
+@use "../../common" as *;
+
+.partners {
+    h2 {
+        font-family: Montserrat;
+        color: $color-main-regular;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 17.07px;
+        letter-spacing: 1px;
+        font-weight: $font-bold;
+        padding-bottom: 30px;
+        padding-top: 60px;
+        font-size: $font-size-h3-caps;
+    }
+    .partners-logos {
+        display: grid;
+        img{
+            width: 100%;
+        }
+    }
+}

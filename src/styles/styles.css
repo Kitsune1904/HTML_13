@@ -447,11 +447,99 @@ header .menu-holder ul li a:focus-visible {
   color: #ffffff;
 }
 
-main .team {
-  padding: 53px 8% 0 8%;
-  border-radius: 12px;
+main {
+  font-family: Montserrat;
 }
-main .team .slide img {
+main .team {
+  padding: 53px 30px 0 30px;
+}
+main .team .slide-holder {
+  display: flex;
+  gap: 60px;
+  overflow-x: hidden;
+  scroll-snap-type: inline mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+main .team .slide-holder .slide {
+  background-color: #ededf7;
+  border-radius: 12px;
+  width: 315px;
+}
+main .team .slide-holder .slide img {
   width: 100%;
   border-radius: 12px 12px 0 0;
+}
+main .team .slide-holder .slide p {
+  color: #24a3ff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 28px 30px 5px 30px;
+  line-height: 17.07px;
+  letter-spacing: 1px;
+}
+main .team .slide-holder .slide h2 {
+  background: linear-gradient(-90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0 30px 30px 30px;
+  line-height: 36.57px;
+}
+main .team .slide-holder .slide .bio {
+  padding-bottom: 22px;
+}
+main .team .slide-holder .slide .bio h3 {
+  color: #b3b3ba;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  padding: 0 30px;
+}
+main .team .slide-holder .slide .bio p {
+  color: #b3b3ba;
+  text-transform: none;
+  padding-top: 10px;
+  line-height: 22px;
+  font-weight: 400;
+}
+main .team .pagination-holder {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 32px;
+}
+main .team .pagination-holder a {
+  display: block;
+  background-color: hwb(205 14% 0%/0.2);
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+main .team .pagination-holder a:active,
+main .team .pagination-holder a:hover {
+  background-color: #24a3ff;
+}
+
+.partners h2 {
+  font-family: Montserrat;
+  color: #323264;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 17.07px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding-bottom: 30px;
+  padding-top: 60px;
+  font-size: 14px;
+}
+.partners .partners-logos {
+  display: grid;
+}
+.partners .partners-logos img {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
