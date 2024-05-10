@@ -6,24 +6,24 @@
   position: relative;
   &::before,
   &::after {
-      content: "";
-      position: absolute;
-      height: 10px;
-      border-radius: 0 0 12px 12px;
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
   }
 
   &::before {
-      bottom: -10px;
-      right: 20px;
-      left: 20px;
-      background-color: #CACADB;
+    bottom: -10px;
+    right: 20px;
+    left: 20px;
+    background-color: #cacadb;
   }
 
   &::after {
-      bottom: -20px;
-      right: 40px;
-      left: 40px;
-      background-color: #E7E7F2;
+    bottom: -20px;
+    right: 40px;
+    left: 40px;
+    background-color: #e7e7f2;
   }
 }
 
@@ -194,5 +194,22 @@ header {
   100% {
     opacity: 1;
     display: block;
+  }
+}
+
+@include tabletSD {
+  .gradient {
+    header {
+
+      .setting-holder {
+        padding: 8%;
+        background-color: transparent;
+        justify-content: flex-start;
+        .location {
+          display: flex;
+        }
+
+      }
+    }
   }
 }
