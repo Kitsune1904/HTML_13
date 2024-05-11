@@ -1,22 +1,77 @@
 @use "../../common" as *;
 
 .partners {
+  h2 {
+    font-family: Montserrat;
+    color: $color-main-regular;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 17.07px;
+    letter-spacing: 1px;
+    font-weight: $font-bold;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    font-size: $font-size-h3-caps;
+  }
+  .partners-logos {
+    display: grid;
+    .hide {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@include tabletSD {
+  .partners {
     h2 {
-        font-family: Montserrat;
-        color: $color-main-regular;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 17.07px;
-        letter-spacing: 1px;
-        font-weight: $font-bold;
-        padding-bottom: 30px;
-        padding-top: 60px;
-        font-size: $font-size-h3-caps;
+      padding: 0;
+      padding-bottom: 30px;
     }
     .partners-logos {
-        display: grid;
-        img{
-            width: 100%;
-        }
+      grid-template-columns: 1fr 1fr 1fr;
+      img {
+        height: 120px;
+      }
+      .hide {
+        display: block;
+      }
     }
+  }
+}
+
+@include tabletHD {
+  .partners {
+    .partners-logos {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@include desctopHD {
+  .partners {
+    padding: 0 100px;
+    margin-bottom: 60px;
+    border-radius: 12px;
+    h2 {
+      padding-top: 60px;
+    }
+    img:first-child {
+      border-radius: 12px 0 0 0;
+    }
+    img:nth-child(4) {
+      border-radius: 0 12px 0 0;
+    }
+    img:nth-child(9) {
+      border-radius: 0 0 0 12px;
+    }
+    img:last-child {
+      border-radius: 0 0 12px 0;
+    }
+  }
 }

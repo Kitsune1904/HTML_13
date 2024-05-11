@@ -2,11 +2,10 @@
 
 footer {
   font-family: Montserrat;
-  padding: 0 8% 30px 8%;
-  display: grid;
-  text-align: center;
+  padding: 0 30px 30px 30px;
   background-color: $color-grey-bg;
   .holder {
+    text-align: center;
     border-top: 2px solid $color-grey-separator;
     .dot {
       display: none;
@@ -16,6 +15,7 @@ footer {
       p {
         font-size: $font-size-p;
         color: $color-main-regular;
+        line-height: 19.5px;
       }
       a {
         display: block;
@@ -25,25 +25,25 @@ footer {
         line-height: 14.63px;
         letter-spacing: 1px;
         font-size: 12px;
-        padding: 10px 0;
+        padding: 16px 0;
       }
     }
     .contacts {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 10px;
       .fb-logo {
         width: 38px;
-        padding: 10px 0;
       }
 
       a {
         color: $color-main-alt;
         font-weight: $font-bold;
         font-size: $font-size-p;
+        line-height: 19.5px;
       }
       a:last-child {
-        padding-top: 10px;
         color: $color-active-regular;
       }
     }
@@ -51,5 +51,58 @@ footer {
       padding-top: 30px;
       color: $color-grey-text;
     }
+  }
+}
+
+@include tabletSD {
+  footer {
+    padding: 0 60px 30px 60px;
+    .holder {
+      padding-top: 30px;
+      display: grid;
+      grid-template-rows: 50% 50%;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 21px;
+      align-content: center;
+      .location {
+        grid-column: 1/2;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        a {
+          padding: 0;
+        }
+      }
+      .contacts {
+        grid-column: 1/-1;
+        flex-direction: row;
+        gap: 10px;
+        a:last-child {
+          padding: 0;
+        }
+        .fb-logo {
+          padding: 0;
+        }
+      }
+      .company {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        align-content: center;
+        justify-self: end;
+      }
+      .dot {
+        display: block;
+      }
+      .location, .company, .contacts {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@include desctopHD {
+  footer {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }

@@ -1,16 +1,16 @@
 @use "../../common" as *;
 
 .publications {
-  padding: 8%;
+  padding: 30px;
   background-color: $color-grey-bg;
   p {
     color: $color-active-regular;
     font-weight: $font-bold;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   h2 {
-    background: $color-gradient-redtext;
+    background: $color-gradient-redtext-reverce;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $font-size-h2-reg;
@@ -28,6 +28,7 @@
       img {
         width: 100%;
         height: 200px;
+        border-radius: 8px 8px 0 0;
         object-fit: cover;
         object-position: center;
       }
@@ -46,8 +47,9 @@
           color: $color-grey-text;
           text-transform: uppercase;
           letter-spacing: 1px;
-          padding: 15px 0;
+          padding: 15px 0 13.5px 0;
           border-bottom: 5px solid $color-grey-separator;
+          margin: 0;
         }
 
         p {
@@ -56,9 +58,49 @@
           font-size: $font-size-h3-caps;
           font-weight: $font-normal;
           line-height: 22px;
-          padding-top: 15px;
+          padding-top: 13px;
+          margin: 0;
         }
       }
     }
   }
+}
+
+@include tabletSD {
+  .publications {
+    padding: 30px 60px;
+    p {
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: $font-hero;
+      line-height: 46.32px;
+    }
+    .card-holder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    .card:last-child {
+      grid-column: 1/-1;
+    }
+    
+    }
+  }
+}
+
+@include tabletHD {
+  .publications {
+    .card-holder {
+      grid-template-columns: 1fr 1fr 1fr;
+      .card:last-child {
+        grid-column: 3/3;
+      }}
+    }
+}
+
+@include desctopHD {
+  .publications {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
 }

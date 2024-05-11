@@ -1,24 +1,23 @@
 @use "../../common" as *;
 
 main {
-  text-rendering: optimizeLegibility;
   font-family: Montserrat;
   .team {
     padding: 53px 30px 0 30px;
     .slide-holder {
       display: flex;
       gap: 60px;
-      overflow-x: auto;
-      scroll-snap-type: inline mandatory;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+      overflow: hidden;
       .slide {
         background-color: $color-grey-bg-alt;
         border-radius: 12px;
-        width: 100%;
+        min-width: 100%;
         img {
           width: 100%;
+          height: 500px;
           border-radius: 12px 12px 0 0;
+          object-fit: cover;
+          object-position: center;
         }
 
         p {
@@ -32,7 +31,7 @@ main {
         }
 
         h2 {
-          background: $color-gradient-redtext;
+          background: $color-gradient-redtext-reverce;
           background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: $font-size-h2-reg;
@@ -82,3 +81,97 @@ main {
   }
 }
 
+@include tabletSD {
+  main {
+    .team {
+      padding: 60px;
+      padding-top: 80px;
+      .slide-holder {
+        .slide {
+          .info-holder {
+            padding: 30px;
+            height: 100%;
+            p,
+            h2,
+            .bio,
+            h3 {
+              padding: 0;
+            }
+            h2 {
+              font-size: $font-hero;
+              line-height: 46.32px;
+              padding-bottom: 30px;
+            }
+            .bio {
+              h3 {
+                padding-bottom: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include tabletHD {
+    main {
+      .team {
+        padding: 60px;
+        padding-top: 80px;
+        .slide-holder {
+          .slide {
+            display: grid;
+            height: 528px;
+            grid-template-columns: 44.5% 56%;
+            grid-template-rows: 100%;
+            .image {
+              img {
+                height: 528px;
+                border-radius: 12px 0 0 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desctopSD {
+  main {
+    .team {
+      padding-top: 80px;
+      .slide-holder {
+        .slide {
+          height: 344px;
+          grid-template-columns: 30% 70%;
+          .image {
+            img {
+              height: 344px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desctopHD {
+  main {
+    .team {
+      padding: 0 160px;
+      padding-top: 60px;
+      .slide-holder {
+        .slide {
+          height: 298px;
+          grid-template-columns: 25% 75%;
+          .image {
+            img {
+              height: 298px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

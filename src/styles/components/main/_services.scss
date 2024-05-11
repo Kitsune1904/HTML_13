@@ -1,7 +1,7 @@
 @use "../../common" as *;
 
 .services {
-  padding: 0 8%;
+  padding: 0 30px;
 
   p {
     color: $color-active-regular;
@@ -22,25 +22,62 @@
       line-height: 36.57px;
     }
     .services-card {
-        img {
-            background-color: $color-simple;
-            border-radius: 24px;
-            padding: 14px;
-        }
-        h3 {
-            padding: 30px 0 12px 0;
-            color: $color-active-regular;
-            font-size: $font-size-h3-reg;
-            font-weight: $font-bold;
-            line-height: 26.82px;
-        }
+      img {
+        background-color: $color-simple;
+        border-radius: 24px;
+        padding: 14px;
+      }
+      h3 {
+        padding: 30px 0 12px 0;
+        color: $color-active-regular;
+        font-size: $font-size-h3-reg;
+        font-weight: $font-bold;
+        line-height: 26.82px;
+      }
 
-        p {
-            line-height: 26px;
-            font-size: $font-size-p;
-            text-transform: none;
-            color: $color-simple;
-        }
+      p {
+        line-height: 26px;
+        font-size: $font-size-p;
+        text-transform: none;
+        color: $color-simple;
+      }
     }
   }
+}
+
+@include tabletSD {
+  .services {
+    padding: 0 60px;
+    .services-holder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      h2 {
+        grid-column: 1/-1;
+        font-size: $font-hero;
+        line-height: 46.32px;
+      }
+    }
+  }
+}
+
+@include tabletHD {
+  .services {
+    .services-holder {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@include desctopSD {
+  .services {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@include desctopHD {
+  .services {
+    padding: 0 160px;}
 }
