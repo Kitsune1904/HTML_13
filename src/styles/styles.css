@@ -318,6 +318,31 @@ header .logo-holder img:last-child {
   stroke: #f0145a;
 }
 
+.public-page {
+  grid-template-columns: 65% 35%;
+  background-image: none;
+}
+.public-page .logo-holder {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.public-page .logo-holder p {
+  font-size: 20px;
+  line-height: 24.38px;
+  font-weight: 400;
+  display: block;
+}
+.public-page .setting-holder {
+  background-color: #f5f5fa;
+}
+.public-page .setting-holder a {
+  color: #b3b3ba;
+}
+.public-page .menu-holder .burger:hover {
+  background-color: #e6e6f0;
+  border-radius: 8px;
+}
+
 @keyframes fadeInOut {
   0% {
     opacity: 0;
@@ -333,119 +358,150 @@ header .logo-holder img:last-child {
   }
 }
 @media (width >= 768px) {
-  .gradient header {
+  header {
     background-image: url("../img/bg-tablet-SD.png");
     height: 1024px;
     padding: 50px 60px 0 60px;
+    gap: 30px;
   }
-  .gradient header .menu-holder,
-  .gradient header .logo-holder {
+  header .menu-holder,
+  header .logo-holder {
     padding: 0;
     margin: 0;
   }
-  .gradient header .setting-holder,
-  .gradient header .menu-holder,
-  .gradient header .logo-holder {
-    margin-bottom: 30px;
-  }
-  .gradient header .menu-holder {
+  header .menu-holder {
     display: flex;
     grid-column: 1/-1;
     grid-row: 3/4;
     justify-self: start;
   }
-  .gradient header .menu-holder .nav,
-  .gradient header .menu-holder .burger {
+  header .menu-holder .nav,
+  header .menu-holder .burger {
     display: none;
   }
-  .gradient header .menu-holder .nav-holder {
+  header .menu-holder .nav-holder {
     display: block;
   }
-  .gradient header .menu-holder .nav-holder ul {
+  header .menu-holder .nav-holder ul {
     display: flex;
     flex-direction: row;
     gap: 15px;
   }
-  .gradient header .logo-holder {
-    margin-bottom: 30px;
-  }
-  .gradient header .logo-holder img:first-child {
+  header .logo-holder img:first-child {
     height: 60px;
   }
-  .gradient header .logo-holder img:last-child {
+  header .logo-holder img:last-child {
     display: none;
   }
-  .gradient header .setting-holder {
+  header .setting-holder {
     background-color: transparent;
     justify-content: start;
     gap: 6px;
     padding: 0;
   }
-  .gradient header .setting-holder .location {
+  header .setting-holder .location {
     display: flex;
     gap: 6px;
     color: #b3b3ba;
     font-weight: 400;
     line-height: 19.5px;
   }
-  .gradient header .setting-holder .contact {
+  header .setting-holder .contact {
     display: flex;
     align-items: center;
     gap: 6px;
   }
-  .gradient header .setting-holder .contact .facebook {
+  header .setting-holder .contact .facebook {
     width: 24px;
   }
-  .gradient header .dot,
-  .gradient header .facebook {
+  header .dot,
+  header .facebook {
     display: block;
   }
-  .gradient header .losung {
+  header .losung {
     height: 804px;
     padding: 0;
   }
-  .gradient header .losung h1 {
+  header .losung h1 {
     padding: 250px 0 410px 0;
+  }
+  .public-page {
+    background-image: none;
+    height: auto;
+    gap: 15px;
+  }
+  .public-page .setting-holder {
+    background-color: #fff;
+    margin: 0;
+  }
+  .public-page .menu-holder {
+    margin: 0;
+  }
+  .public-page .menu-holder a {
+    color: #24a3ff;
+  }
+  .public-page .logo-holder {
+    display: flex;
+    margin: 0;
+  }
+  .public-page .logo-holder a {
+    display: flex;
+  }
+  .public-page .logo-holder img:last-child {
+    display: block;
+    height: 47px;
+    width: 21px;
+  }
+  .public-page .logo-holder p {
+    font-size: 36px;
+    line-height: 43.88px;
   }
 }
 @media (width >= 1024px) {
-  .gradient header {
+  header {
     background-image: url("../img/bg.png");
     height: 768px;
     background-size: contain;
     grid-template-columns: 40% 60%;
+    gap: 16px;
   }
-  .gradient header .logo-holder {
+  header .logo-holder {
     grid-row: 1/3;
     margin: 0;
   }
-  .gradient header .setting-holder,
-  .gradient header .menu-holder {
+  header .setting-holder,
+  header .menu-holder {
     grid-column: 2/3;
     justify-self: end;
   }
-  .gradient header .menu-holder {
+  header .menu-holder {
     grid-row: 2/3;
   }
-  .gradient header .losung h1 {
-    padding: 210px 0 290px 0;
+  header .losung h1 {
+    padding: 230px 0 290px 0;
+  }
+  .public-page {
+    grid-template-columns: 40% 60%;
   }
 }
 @media (width >= 1440px) {
-  .gradient header {
+  header {
     height: 800px;
   }
-  .gradient header .losung h1 {
-    padding: 300px 0 300px 0;
+  header .losung h1 {
+    padding: 250px 0 300px 0;
   }
 }
 @media (width >= 1920px) {
-  .gradient header {
+  header {
     height: 1000px;
     padding: 50px 160px 0 160px;
   }
-  .gradient header .losung h1 {
+  header .losung h1 {
     padding: 300px 0 400px 0;
+  }
+  .public-page {
+    padding: 50px 160px 0px 160px;
   }
 }
 .description-holder {
@@ -1099,5 +1155,137 @@ footer .holder .company {
   footer {
     padding-left: 160px;
     padding-right: 160px;
+  }
+}
+main .explanation-holder {
+  padding: 30px;
+}
+main .explanation-holder img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 12px;
+}
+main .explanation-holder h2 {
+  font-size: 20px;
+  line-height: 24.38px;
+  color: #323264;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+main .explanation-holder h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #b3b3ba;
+  font-size: 12px;
+  line-height: 14.63px;
+  margin-bottom: 30px;
+}
+main .explanation-holder .history {
+  border-top: 4px solid #e6e6f0;
+  border-bottom: 4px solid #e6e6f0;
+  padding: 30px 0;
+}
+main .explanation-holder .history p {
+  font-size: 16px;
+  line-height: 26px;
+}
+main .explanation-holder .history p:nth-child(2) {
+  padding-top: 20px;
+}
+main .explanation-holder .history h1 {
+  padding: 30px 0;
+  font-size: 30px;
+  line-height: 36.57px;
+  background: linear-gradient(90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+  font-weight: 700;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .explanation-holder .history h4 {
+  color: #46466e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  padding: 30px 0 15px 0;
+}
+main .explanation-holder .history ol {
+  padding-left: 41px;
+  margin-bottom: 30px;
+}
+main .explanation-holder .history ol li {
+  list-style-type: decimal;
+  line-height: 26px;
+  font-size: 18px;
+}
+main .explanation-holder .history ol li::marker {
+  color: #f0145a;
+  font-weight: 700;
+}
+main .explanation-holder .history ol li:first-child {
+  padding-bottom: 15px;
+}
+main .explanation-holder .history img {
+  height: 195.89px;
+  margin: 30px 0;
+}
+main .explanation-holder .social {
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+}
+main .explanation-holder .social a {
+  padding: 9px;
+  border-radius: 12px;
+  background-color: #f5f5fa;
+}
+main .explanation-holder .social a img {
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+}
+
+@media (width >= 768px) {
+  main .explanation-holder {
+    padding: 60px;
+  }
+  main .explanation-holder h2 {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+  main .explanation-holder img {
+    height: 500px;
+  }
+  main .explanation-holder .history h1 {
+    font-size: 38px;
+    line-height: 46.32px;
+  }
+  main .explanation-holder .history h4 {
+    font-size: 22px;
+  }
+  main .explanation-holder .history img {
+    height: 398px;
+  }
+}
+@media (width >= 1024px) {
+  main .explanation-holder .history img {
+    display: block;
+    margin: 0 auto;
+    width: 640px;
+  }
+}
+@media (width >= 1440px) {
+  main .explanation-holder {
+    padding: 60px 180px;
+  }
+}
+@media (width >= 1920px) {
+  main .explanation-holder {
+    padding: 60px 280px;
   }
 }/*# sourceMappingURL=styles.css.map */
