@@ -31,7 +31,7 @@
                 <a href="./additional/publications.html">publications</a>
               </li>
               <li>
-                <a href="#">contact</a>
+                <a href="#" id="desckContact">contact</a>
               </li>
             </ul>
           </nav>
@@ -71,7 +71,7 @@
                 <a href="./additional/publications.html">publications</a>
               </li>
               <li>
-                <a href="#">contact</a>
+                <a href="#" id="phoneContact">contact</a>
               </li>
             </ul>
           </div>
@@ -460,6 +460,44 @@
           </div>
         </div>
       </div>
+      <div class="popup" id="popUp">
+        <div class="form-holder">
+          <div class="main-text">
+            <h2>We would like to help you</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              stroke="#EC6F5D"
+              stroke-width="2"
+              class="button"
+              id="popupClose"
+            >
+              <line x1="8" y1="8" x2="24" y2="24" />
+              <line x1="24" y1="8" x2="8" y2="24" />
+            </svg>
+          </div>
+          <form action="">
+            <input type="text" name="userName" placeholder="Name" required />
+            <textarea
+              name="userMessage" class="message"
+              maxlength="300"
+              placeholder="Message" required
+            ></textarea>
+            <h4>How to answer you?</h4>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+              pattern="+[0-9]{3} [0-9]{3} [0-9]{3} [0-9]{3}"
+              required
+            />
+            <input type="email" name="email" class="email" placeholder="Email" required/>
+            <input type="submit" value="Send message" />
+          </form>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="holder">
@@ -489,6 +527,6 @@
     </footer>
     <script src="./show_button.js"></script>
     <script src="./burger.js"></script>
-    <script src="./current.js"></script>
+    <script src="./popup.js"></script>
   </body>
 </html>
