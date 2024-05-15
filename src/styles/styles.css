@@ -247,8 +247,7 @@ header .menu-holder .nav ul li a {
 header .menu-holder .nav ul li a:hover {
   background-color: #e6e6f0;
 }
-header .menu-holder .nav ul li a:active,
-header .menu-holder .nav ul li a:focus-visible {
+header .menu-holder .nav ul li a:active {
   color: #f0145a;
 }
 header .logo-holder {
@@ -278,10 +277,16 @@ header .logo-holder img:last-child {
   margin-right: 3px;
 }
 .setting-holder .lang a:hover {
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+.setting-holder .lang a:active {
   background-color: #f0145a;
 }
 .setting-holder .contact a:hover {
   color: #f0145a;
+}
+.setting-holder .contact .facebook:hover {
+  content: url("../img/fb-rose.svg");
 }
 .setting-holder .location {
   display: none;
@@ -318,27 +323,41 @@ header .logo-holder img:last-child {
   stroke: #f0145a;
 }
 
-.public-page {
+.public-page,
+.about-page {
   grid-template-columns: 65% 35%;
   background-image: none;
 }
-.public-page .logo-holder {
+.public-page .logo-holder,
+.about-page .logo-holder {
   display: flex;
   flex-wrap: nowrap;
 }
-.public-page .logo-holder p {
+.public-page .logo-holder p,
+.about-page .logo-holder p {
   font-size: 20px;
   line-height: 24.38px;
   font-weight: 400;
   display: block;
 }
-.public-page .setting-holder {
+.public-page .setting-holder,
+.about-page .setting-holder {
   background-color: #f5f5fa;
 }
-.public-page .setting-holder a {
+.public-page .setting-holder a,
+.about-page .setting-holder a {
   color: #b3b3ba;
 }
-.public-page .menu-holder .burger:hover {
+.public-page .setting-holder .lang a:hover,
+.about-page .setting-holder .lang a:hover {
+  background-color: #f5f5fa;
+}
+.public-page .setting-holder .lang a:active,
+.about-page .setting-holder .lang a:active {
+  background-color: #f0145a;
+}
+.public-page .menu-holder .burger:hover,
+.about-page .menu-holder .burger:hover {
   background-color: #e6e6f0;
   border-radius: 8px;
 }
@@ -387,6 +406,13 @@ header .logo-holder img:last-child {
     flex-direction: row;
     gap: 15px;
   }
+  header .menu-holder .nav-holder ul a:hover {
+    border-bottom: 2px solid #ffffff;
+  }
+  header .menu-holder .nav-holder ul a:active {
+    color: #f0145a;
+    border-bottom: 2px solid #f0145a;
+  }
   header .logo-holder img:first-child {
     height: 60px;
   }
@@ -425,34 +451,51 @@ header .logo-holder img:last-child {
   header .losung h1 {
     padding: 250px 0 410px 0;
   }
-  .public-page {
+  .public-page,
+  .about-page {
     background-image: none;
     height: auto;
     gap: 15px;
   }
-  .public-page .setting-holder {
+  .public-page .setting-holder,
+  .about-page .setting-holder {
     background-color: #fff;
     margin: 0;
   }
-  .public-page .menu-holder {
+  .public-page .menu-holder,
+  .about-page .menu-holder {
     margin: 0;
   }
-  .public-page .menu-holder a {
+  .public-page .menu-holder a,
+  .about-page .menu-holder a {
     color: #24a3ff;
   }
-  .public-page .logo-holder {
+  .public-page .menu-holder .nav-holder ul a:hover,
+  .about-page .menu-holder .nav-holder ul a:hover {
+    border-bottom: 2px solid #24a3ff;
+  }
+  .public-page .menu-holder .nav-holder ul a:active,
+  .about-page .menu-holder .nav-holder ul a:active {
+    color: #f0145a;
+    border-bottom: 2px solid #f0145a;
+  }
+  .public-page .logo-holder,
+  .about-page .logo-holder {
     display: flex;
     margin: 0;
   }
-  .public-page .logo-holder a {
+  .public-page .logo-holder a,
+  .about-page .logo-holder a {
     display: flex;
   }
-  .public-page .logo-holder img:last-child {
+  .public-page .logo-holder img:last-child,
+  .about-page .logo-holder img:last-child {
     display: block;
     height: 47px;
     width: 21px;
   }
-  .public-page .logo-holder p {
+  .public-page .logo-holder p,
+  .about-page .logo-holder p {
     font-size: 36px;
     line-height: 43.88px;
   }
@@ -480,7 +523,8 @@ header .logo-holder img:last-child {
   header .losung h1 {
     padding: 230px 0 290px 0;
   }
-  .public-page {
+  .public-page,
+  .about-page {
     grid-template-columns: 40% 60%;
   }
 }
@@ -500,7 +544,8 @@ header .logo-holder img:last-child {
   header .losung h1 {
     padding: 300px 0 400px 0;
   }
-  .public-page {
+  .public-page,
+  .about-page {
     padding: 50px 160px 0px 160px;
   }
 }
@@ -675,6 +720,7 @@ header .logo-holder img:last-child {
 .services p {
   color: #24a3ff;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .services .services-holder {
   display: grid;
@@ -1083,6 +1129,9 @@ footer .holder .location a {
   font-size: 12px;
   padding: 16px 0;
 }
+footer .holder .location a:hover {
+  color: #f0145a;
+}
 footer .holder .contacts {
   display: flex;
   flex-direction: column;
@@ -1092,6 +1141,9 @@ footer .holder .contacts {
 footer .holder .contacts .fb-logo {
   width: 38px;
 }
+footer .holder .contacts .fb-logo:hover {
+  content: url("../img/fb-logo-rose.svg");
+}
 footer .holder .contacts a {
   color: #46466e;
   font-weight: 700;
@@ -1100,6 +1152,9 @@ footer .holder .contacts a {
 }
 footer .holder .contacts a:last-child {
   color: #24a3ff;
+}
+footer .holder .contacts a:hover {
+  color: #f0145a;
 }
 footer .holder .company {
   padding-top: 30px;
@@ -1249,6 +1304,9 @@ main .explanation-holder .social a img {
   height: 24px;
   border-radius: 0;
 }
+main .explanation-holder .social a:hover {
+  background-color: #ededf7;
+}
 
 @media (width >= 768px) {
   main .explanation-holder {
@@ -1287,5 +1345,489 @@ main .explanation-holder .social a img {
 @media (width >= 1920px) {
   main .explanation-holder {
     padding: 60px 280px;
+  }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(50, 50, 100, 0.7);
+  z-index: 200;
+}
+.popup .form-holder {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5fa;
+  padding: 30px;
+  align-content: center;
+}
+.popup .form-holder .main-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.popup .form-holder .main-text h2 {
+  align-self: flex-end;
+  background: linear-gradient(90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+  font-weight: 700;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  line-height: 36.57px;
+}
+.popup .form-holder .main-text svg {
+  align-self: flex-start;
+  width: 32px;
+  height: 32px;
+}
+.popup .form-holder input,
+.popup .form-holder textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-family: Montserrat;
+  color: #b3b3ba;
+  line-height: 26px;
+  font-size: 16px;
+}
+.popup .form-holder textarea {
+  height: 130px;
+  resize: none;
+}
+.popup .form-holder .email, .popup .form-holder .message {
+  margin-top: 10px;
+}
+.popup .form-holder h4 {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b3b3ba;
+}
+.popup .form-holder input:last-child {
+  margin-top: 30px;
+  background-color: #24a3ff;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 19.5px;
+  padding: 18px 30px;
+  border-radius: 12px;
+}
+
+@media (width >= 1024px) {
+  .popup .form-holder {
+    width: 650px;
+    height: 612px;
+    border-radius: 12px;
+  }
+  .popup .form-holder .main-text h2 {
+    align-self: flex-end;
+    background: linear-gradient(90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+    font-weight: 700;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 38px;
+    line-height: 46.32px;
+  }
+  .popup .form-holder .main-text svg {
+    align-self: flex-start;
+    width: 32px;
+    height: 32px;
+  }
+  .popup .form-holder input,
+  .popup .form-holder textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: Montserrat;
+    color: #b3b3ba;
+  }
+  .popup .form-holder input:nth-child(1),
+  .popup .form-holder input:nth-child(4) {
+    margin-bottom: 10px;
+  }
+  .popup .form-holder h4 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #b3b3ba;
+  }
+  .popup .form-holder input:last-child {
+    margin-top: 30px;
+    background-color: #24a3ff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+    padding: 18px 30px;
+    border-radius: 12px;
+  }
+}
+.about-main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.about-main .idea,
+.about-main .about,
+.about-main .team,
+.about-main .text,
+.about-main .title {
+  grid-column: 1/-1;
+}
+.about-main .idea,
+.about-main .about,
+.about-main .text,
+.about-main .title {
+  margin: 0 30px;
+}
+.about-main .pagination-phone,
+.about-main .pagination-desk {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 32px;
+}
+.about-main .pagination-phone a,
+.about-main .pagination-desk a {
+  display: block;
+  background-color: hwb(205 14% 0%/0.2);
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+.about-main .pagination-phone a:active,
+.about-main .pagination-phone a:hover,
+.about-main .pagination-desk a:active,
+.about-main .pagination-desk a:hover {
+  background-color: #24a3ff;
+}
+.about-main h2 {
+  background: linear-gradient(90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+  font-weight: 700;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+.about-main p {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.about-main .idea {
+  padding: 30px 0;
+}
+.about-main .idea p:last-child {
+  padding-top: 20px;
+}
+.about-main .about {
+  border-left: 4px solid #e6e6f0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about-main .about .holder {
+  padding-left: 30px;
+}
+.about-main .about .holder div {
+  display: flex;
+  gap: 8px;
+}
+.about-main .about .holder div h3 {
+  display: inline;
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
+  font-weight: 700;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 43.88px;
+}
+.about-main .about .holder p {
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #323264;
+}
+.about-main .team {
+  background-image: url("../img/team.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 114.06px;
+  padding: 0;
+  margin: 30px 0;
+}
+.about-main .team h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 13px;
+  line-height: 114.06px;
+  text-transform: uppercase;
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.8);
+  box-shadow: 0px 15px 30px 0px rgba(40, 40, 86, 0.8);
+}
+.about-main .text p:nth-child(2) {
+  padding: 20px 0;
+}
+.about-main .title {
+  padding: 30px 0 0 0;
+}
+.about-main .desk-slider {
+  display: none;
+}
+.about-main .phone-slider,
+.about-main .desk-slider {
+  grid-column: 1/-1;
+  background-color: #f5f5fa;
+  padding: 0 60px;
+}
+.about-main .phone-slider h4,
+.about-main .desk-slider h4 {
+  font-size: 14px;
+  line-height: 17.07px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #323264;
+  padding: 30px 0;
+}
+.about-main .phone-slider .slider,
+.about-main .desk-slider .slider {
+  display: none;
+  height: 90px;
+}
+.about-main .phone-slider .slider img,
+.about-main .desk-slider .slider img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 12px;
+}
+.about-main .phone-slider .slider:target,
+.about-main .desk-slider .slider:target {
+  display: block;
+}
+.about-main .phone-slider .pagination,
+.about-main .desk-slider .pagination {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 32px;
+  padding-bottom: 30px;
+}
+.about-main .phone-slider .pagination a,
+.about-main .desk-slider .pagination a {
+  display: block;
+  background-color: hwb(205 14% 0%/0.2);
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+.about-main .phone-slider .pagination a:hover,
+.about-main .desk-slider .pagination a:hover {
+  background-color: hsla(205, 100%, 57%, 0.6);
+}
+.about-main .phone-slider .pagination a:active,
+.about-main .desk-slider .pagination a:active {
+  background-color: #24a3ff;
+}
+
+@media (width >= 768px) {
+  .about-main .idea,
+  .about-main .about,
+  .about-main .text,
+  .about-main .title {
+    margin: 0 60px;
+  }
+  .about-main .idea {
+    margin-top: 60px;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .about-main .team {
+    height: 233.6px;
+    margin: 60px 0;
+  }
+  .about-main .team h1 {
+    line-height: 233.6px;
+    letter-spacing: 63px;
+    font-size: 46px;
+  }
+  .about-main h2 {
+    line-height: 46.32px;
+    font-size: 38px;
+  }
+  .about-main .title {
+    padding: 30px 0 30px 0;
+  }
+  .about-main .phone-slider {
+    display: none;
+  }
+  .about-main .desk-slider {
+    display: block;
+    grid-column: 1/-1;
+    background-color: #f5f5fa;
+    padding: 0 60px;
+  }
+  .about-main .desk-slider .holder {
+    display: flex;
+    overflow: hidden;
+  }
+  .about-main .desk-slider .holder .slide {
+    display: none;
+    width: 100vw;
+    height: 90px;
+    justify-content: space-between;
+  }
+  .about-main .desk-slider .holder .slide img {
+    width: 132px;
+    display: inline;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 12px;
+  }
+  .about-main .desk-slider .slide:target {
+    display: flex;
+  }
+  .about-main .desk-slider .pagination {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 32px;
+    padding-bottom: 30px;
+  }
+  .about-main .desk-slider .pagination a {
+    display: block;
+    background-color: hwb(205 14% 0%/0.2);
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+  }
+  .about-main .desk-slider .pagination a:hover {
+    background-color: hsla(205, 100%, 57%, 0.6);
+  }
+  .about-main .desk-slider .pagination a:active {
+    background-color: #24a3ff;
+  }
+}
+@media (width >= 1024px) {
+  .about-main .idea,
+  .about-main .text {
+    grid-column: 1/2;
+    padding: 0;
+    margin: 60px 30px 0 60px;
+  }
+  .about-main .about,
+  .about-main .title {
+    grid-column: 2/3;
+    margin: 60px 60px 0 0;
+    height: 322px;
+    padding: 0;
+  }
+  .about-main .text {
+    margin: 0 30px 0 60px;
+  }
+  .about-main .title {
+    margin: 0 60px 0 0;
+  }
+  .about-main .team {
+    height: 311.47px;
+    margin: 60px 0;
+  }
+  .about-main .team h1 {
+    line-height: 311.47px;
+    letter-spacing: 86px;
+    font-size: 63px;
+  }
+  .about-main .desk-slider .holder .slide {
+    width: 100%;
+    height: 110px;
+  }
+  .about-main .desk-slider .holder .slide img {
+    width: 196px;
+  }
+}
+@media (width >= 1440px) {
+  .about-main .team {
+    height: 438px;
+    margin: 60px 0;
+  }
+  .about-main .team h1 {
+    line-height: 438px;
+    letter-spacing: 63px;
+    font-size: 96px;
+  }
+  .about-main .idea,
+  .about-main .text {
+    margin-left: 180px;
+  }
+  .about-main .about,
+  .about-main .title {
+    margin-right: 180px;
+  }
+  .about-main .desk-slider .holder .slide {
+    width: 100%;
+    height: 110px;
+  }
+  .about-main .desk-slider .holder .slide img {
+    width: 300px;
+  }
+}
+@media (width >= 1920px) {
+  .about-main .team {
+    height: 584px;
+    margin: 60px 0;
+  }
+  .about-main .team h1 {
+    line-height: 584px;
+    letter-spacing: 63px;
+    font-size: 96px;
+  }
+  .about-main .idea,
+  .about-main .text {
+    margin-left: 280px;
+  }
+  .about-main .about,
+  .about-main .title {
+    margin-right: 280px;
+  }
+  .about-main .desk-slider {
+    padding: 0 180px;
+  }
+  .about-main .desk-slider .holder .slide {
+    width: 100%;
+    height: 110px;
+  }
+  .about-main .desk-slider .holder .slide img {
+    width: 370px;
   }
 }/*# sourceMappingURL=styles.css.map */

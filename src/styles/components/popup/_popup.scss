@@ -1,0 +1,141 @@
+@use "../../common" as *;
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(50, 50, 100, 0.7);
+  z-index: 200;
+  .form-holder {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-grey-bg;
+    padding: 30px;
+    align-content: center;
+
+    .main-text {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      h2 {
+        align-self: flex-end;
+        background: $color-gradient-redtext-reverce;
+        font-weight: $font-bold;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: $font-size-h2-reg;
+        line-height: 36.57px;
+      }
+      svg {
+        align-self: flex-start;
+        width: 32px;
+        height: 32px;
+      }
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      font-family: Montserrat;
+      color: $color-grey-text;
+      line-height: 26px;
+      font-size: $font-size-h4-reg;
+    }
+    textarea {
+      height: 130px;
+      resize: none;
+    }
+    .email, .message {
+      margin-top: 10px;
+    }
+
+    h4 {
+      margin-top: 30px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      font-weight: $font-bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-grey-text;
+    }
+    input:last-child {
+      margin-top: 30px;
+      background-color: $color-active-regular;
+      color: $color-simple;
+      font-weight: $font-bold;
+      line-height: 19.5px;
+      padding: 18px 30px;
+      border-radius: 12px;
+    }
+  }
+}
+
+@include tabletHD {
+  .popup {
+    .form-holder {
+      width: 650px;
+      height: 612px;
+      border-radius: 12px;
+
+      .main-text {
+        h2 {
+          align-self: flex-end;
+          background: $color-gradient-redtext-reverce;
+          font-weight: $font-bold;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: $font-hero;
+          line-height: 46.32px;
+        }
+        svg {
+          align-self: flex-start;
+          width: 32px;
+          height: 32px;
+        }
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-family: Montserrat;
+        color: $color-grey-text;
+      }
+      input:nth-child(1),
+      input:nth-child(4) {
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        margin-top: 30px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-weight: $font-bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-grey-text;
+      }
+      input:last-child {
+        margin-top: 30px;
+        background-color: $color-active-regular;
+        color: $color-simple;
+        font-size: $font-size-h4-reg;
+        font-weight: $font-bold;
+        line-height: 19.5px;
+        padding: 18px 30px;
+        border-radius: 12px;
+      }
+    }
+  }
+}

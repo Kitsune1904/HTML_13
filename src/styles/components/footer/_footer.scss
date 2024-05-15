@@ -27,6 +27,9 @@ footer {
         font-size: 12px;
         padding: 16px 0;
       }
+      a:hover {
+        color: $color-accent;
+      }
     }
     .contacts {
       display: flex;
@@ -37,6 +40,10 @@ footer {
         width: 38px;
       }
 
+      .fb-logo:hover {
+        content: url("../img/fb-logo-rose.svg");
+      }
+
       a {
         color: $color-main-alt;
         font-weight: $font-bold;
@@ -45,6 +52,9 @@ footer {
       }
       a:last-child {
         color: $color-active-regular;
+      }
+      a:hover {
+        color: $color-accent;
       }
     }
     .company {

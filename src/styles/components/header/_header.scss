@@ -108,8 +108,7 @@ header {
             background-color: $color-grey-separator;
           }
 
-          a:active,
-          a:focus-visible {
+          a:active {
             color: $color-accent;
           }
         }
@@ -144,12 +143,18 @@ header {
       margin-right: 3px;
     }
     a:hover {
+      background-color: hsla(0, 0%, 100%, 0.2);
+    }
+    a:active {
       background-color: $color-accent;
     }
   }
   .contact {
     a:hover {
       color: $color-accent;
+    }
+    .facebook:hover {
+      content: url("../img/fb-rose.svg");
     }
   }
   .location {
@@ -192,7 +197,8 @@ header {
   }
 }
 
-.public-page {
+.public-page,
+.about-page {
   grid-template-columns: 65% 35%;
   background-image: none;
   .logo-holder {
@@ -209,6 +215,14 @@ header {
     background-color: $color-grey-bg;
     a {
       color: $color-grey-text;
+    }
+    .lang {
+      a:hover {
+        background-color: $color-grey-bg;
+      }
+      a:active {
+        background-color: $color-accent;
+      }
     }
   }
   .menu-holder {
@@ -264,6 +278,14 @@ header {
           display: flex;
           flex-direction: row;
           gap: 15px;
+
+          a:hover {
+            border-bottom: 2px solid $color-simple;
+          }
+          a:active {
+            color: $color-accent;
+            border-bottom: 2px solid $color-accent;
+          }
         }
       }
     }
@@ -311,7 +333,8 @@ header {
     }
   }
 
-  .public-page {
+  .public-page,
+  .about-page {
     background-image: none;
     height: auto;
     gap: 15px;
@@ -324,7 +347,19 @@ header {
       a {
         color: $color-active-regular;
       }
+      .nav-holder {
+        ul {
+          a:hover {
+            border-bottom: 2px solid $color-active-regular;
+          }
+          a:active {
+            color: $color-accent;
+            border-bottom: 2px solid $color-accent;
+          }
+        }
+      }
     }
+
     .logo-holder {
       display: flex;
       margin: 0;
@@ -369,7 +404,8 @@ header {
       }
     }
   }
-  .public-page {
+  .public-page,
+  .about-page {
     grid-template-columns: 40% 60%;
   }
 }
@@ -395,7 +431,8 @@ header {
       }
     }
   }
-  .public-page {
+  .public-page,
+  .about-page {
     padding: 50px 160px 0px 160px;
   }
 }

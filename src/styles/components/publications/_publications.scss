@@ -92,6 +92,9 @@ main {
           border-radius: 0;
         }
       }
+      a:hover {
+        background-color: $color-grey-bg-alt;
+      }
     }
   }
 }
