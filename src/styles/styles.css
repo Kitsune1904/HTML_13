@@ -573,6 +573,7 @@ header .logo-holder img:last-child {
   font-weight: 700;
   padding: 34px 0;
   transition: 1s;
+  color: #ffffff;
 }
 .description-holder .buttons a:nth-child(1) {
   background: linear-gradient(-90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
