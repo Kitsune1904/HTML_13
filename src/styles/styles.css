@@ -1613,10 +1613,15 @@ main .explanation-holder .social a:hover {
   color: #323264;
   padding: 30px 0;
 }
+.about-main .phone-slider .holder,
+.about-main .desk-slider .holder {
+  display: flex;
+  overflow: hidden;
+}
 .about-main .phone-slider .slider,
 .about-main .desk-slider .slider {
-  display: none;
   height: 90px;
+  min-width: 100%;
 }
 .about-main .phone-slider .slider img,
 .about-main .desk-slider .slider img {
@@ -1700,12 +1705,12 @@ main .explanation-holder .social a:hover {
     overflow: hidden;
   }
   .about-main .desk-slider .holder .slide {
-    display: none;
-    width: 100vw;
-    height: 90px;
+    min-width: 100%;
+    display: flex;
     justify-content: space-between;
   }
   .about-main .desk-slider .holder .slide img {
+    height: 90px;
     width: 132px;
     display: inline;
     -o-object-fit: cover;
