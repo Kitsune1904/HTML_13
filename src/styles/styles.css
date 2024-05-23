@@ -862,8 +862,10 @@ main .team .pagination-holder a {
   height: 16px;
   border-radius: 8px;
 }
-main .team .pagination-holder a:active,
 main .team .pagination-holder a:hover {
+  background-color: hsla(205, 100%, 57%, 0.6);
+}
+main .team .pagination-holder a:active {
   background-color: #24a3ff;
 }
 main .team .pagination-holder .active {
