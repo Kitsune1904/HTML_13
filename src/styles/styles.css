@@ -700,7 +700,7 @@ header .logo-holder img:last-child {
   .description-holder .conteiner .card-holder h3 {
     padding-bottom: 30px;
   }
-  .description-holder .conteiner .card-holder p {
+  .description-holder .conteiner .card-holder p, .description-holder .conteiner .card-holder h3 {
     width: 581px;
   }
 }
@@ -711,7 +711,7 @@ header .logo-holder img:last-child {
   .description-holder .conteiner .card-holder {
     margin-top: 73px;
   }
-  .description-holder .conteiner .card-holder p {
+  .description-holder .conteiner .card-holder p, .description-holder .conteiner .card-holder h3 {
     width: 861px;
   }
 }
@@ -866,6 +866,9 @@ main .team .pagination-holder a:active,
 main .team .pagination-holder a:hover {
   background-color: #24a3ff;
 }
+main .team .pagination-holder .active {
+  background-color: #24a3ff;
+}
 
 @media (width >= 768px) {
   main .team {
@@ -1004,11 +1007,17 @@ main .team .pagination-holder a:hover {
   padding: 30px;
   background-color: #f5f5fa;
 }
-.publications p {
+.publications a {
   color: #24a3ff;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 5px;
+}
+.publications a:hover {
+  color: #f0145a;
+}
+.publications a:hover svg path {
+  stroke: #f0145a;
 }
 .publications h2 {
   background: linear-gradient(90deg, rgb(240, 20, 90) 0%, rgb(239, 128, 128) 100%);
@@ -1040,11 +1049,15 @@ main .team .pagination-holder a:hover {
 .publications .card-holder .card .text {
   padding: 30px;
 }
-.publications .card-holder .card .text h3 {
+.publications .card-holder .card .text a {
   color: #24a3ff;
   font-weight: 700;
   font-size: 16px;
   line-height: 19.5px;
+  text-transform: none;
+}
+.publications .card-holder .card .text a:hover {
+  color: #f0145a;
 }
 .publications .card-holder .card .text h4 {
   font-size: 12px;
@@ -1661,6 +1674,10 @@ main .explanation-holder .social a:hover {
 }
 .about-main .phone-slider .pagination a:active,
 .about-main .desk-slider .pagination a:active {
+  background-color: #24a3ff;
+}
+.about-main .phone-slider .pagination .active,
+.about-main .desk-slider .pagination .active {
   background-color: #24a3ff;
 }
 

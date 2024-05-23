@@ -3,11 +3,19 @@
 .publications {
   padding: 30px;
   background-color: $color-grey-bg;
-  p {
+  a {
     color: $color-active-regular;
     font-weight: $font-bold;
     text-transform: uppercase;
     margin-bottom: 5px;
+  }
+  a:hover {
+    color: $color-accent;
+    svg {
+      path {
+        stroke: $color-accent;
+      }
+    }
   }
   h2 {
     background: $color-gradient-redtext-reverce;
@@ -34,11 +42,15 @@
       }
       .text {
         padding: 30px;
-        h3 {
+        a {
           color: $color-active-regular;
           font-weight: $font-bold;
           font-size: $font-size-h4-reg;
           line-height: 19.5px;
+          text-transform: none;
+        }
+        a:hover {
+          color: $color-accent;
         }
         h4 {
           font-size: 12px;

@@ -166,7 +166,7 @@
         h3 {
           padding-bottom: 30px;
         }
-        p {
+        p, h3 {
           width: 581px;
         }
       }
@@ -180,7 +180,7 @@
       grid-template-columns: 37% 63%;
       .card-holder {
         margin-top: 73px;
-        p {
+        p, h3 {
           width: 861px;
         }
     }
